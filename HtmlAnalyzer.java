@@ -52,13 +52,13 @@ public class HtmlAnalyzer {
             String line = in.nextLine();
             if (!line.contains("/") && line != "") {
                 if (line.contains("<")) {
-                    c += 1;
+                    c++;
                 } else {
                     phrase.add(line.trim());
                     index.add(c);
                 }
             } else if (line != "") {
-                c -= 1;
+                c--;
             }
 
         }
